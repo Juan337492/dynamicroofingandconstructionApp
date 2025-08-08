@@ -1,31 +1,41 @@
-import { StyleSheet } from 'react-native';
+import '@/global.css';
+import { Image, StyleSheet, View } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+const HomeScreenImage = require('@/assets/images/HomeScreen.png');
 
-export default function TabOneScreen() {
+export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+    <View style={styles.container} >
+      <View style={styles.imageContainer}>
+        <Image source={HomeScreenImage} style={styles.image} />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+container: {
     flex: 1,
+    backgroundColor: '#25292e',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
+  text: {
+    color: '#fff',
+  },
+  button: {
     fontSize: 20,
-    fontWeight: 'bold',
+    textDecorationLine: 'underline',
+    color: '#fff',
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+   imageContainer: {
+    flex: 1,
+    width: '100%', 
   },
-});
+  image: {
+    width: '100%',
+    height: '100%',
+    borderBottomLeftRadius: 18,
+    borderBottomRightRadius: 18,
+  },
+})
