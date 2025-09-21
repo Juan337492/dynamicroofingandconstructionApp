@@ -1,4 +1,5 @@
 import { EmailJSResponseStatus, send } from '@emailjs/react-native';
+import { Link } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
@@ -16,6 +17,7 @@ import {
 } from 'react-native';
 
 const PhoneImage = require('@/assets/images/Phone.png'); // Add your phone icon image
+
 
 interface FormData {
   name: string;
@@ -115,6 +117,7 @@ export default function ContactScreen() {
   const handleCalendlyOpen = () => {
     Linking.openURL('https://calendly.com/dynamic-rcllc/roof');
   };
+
 
   return (
     <KeyboardAvoidingView 
@@ -255,6 +258,13 @@ export default function ContactScreen() {
             <Text style={styles.calendlyButtonText}>Schedule Appointment</Text>
           </TouchableOpacity>
         </View>
+
+      <View className='sm:w-5/6 sm:mx-auto items-center'>
+      <Link href="/privacy" asChild>
+          <Text className='text-white hover:bg-sky-700 mt-5 font-medium'>Privacy policy</Text>
+      </Link>
+      </View>
+
       </ScrollView>
     </KeyboardAvoidingView>
   );

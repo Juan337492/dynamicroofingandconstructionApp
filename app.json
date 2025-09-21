@@ -23,7 +23,8 @@
         "backgroundColor": "#ffffff",
         "package": "com.juanrodriguez.roofingapp"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.juanrodriguez.roofingapp"
     },
     "web": {
       "bundler": "metro",
